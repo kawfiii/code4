@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">hide</button>
+    <button id="btn2">show</button>
+    <p id="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod a deserunt quae autem hic et ipsum ea provident vero illum quam enim, placeat saepe. Laborum amet quos minus exercitationem eos.</p>
+
+    <input type="text" placeholder="user name" id="input1"><br><br>
+    <input type="text" placeholder="user email" id="input2">
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+<script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $("#p").hide(1000);
+        });
+        $("#btn2").click(function(){
+            $("#p").show(1000);
+        });
+    })
+
+    $(document).ready(function (){
+        $("#input1").focus(function (){
+            $(this).css("background-color", 'lightblue')
+            $(this).css("color", 'white');
+        });
+        $("#input2").blur(function (){
+            $(this).css("background-color", 'yellow')
+            $(this).css("color", 'black');
+        });
+    })
+</script>
+
+</body>
+</html>
